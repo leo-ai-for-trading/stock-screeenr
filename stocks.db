@@ -1,0 +1,12 @@
+CREATE TABLE stocks (
+    id INTEGER NOT NULL,
+    symbol VARCHAR,
+    price NUMERIC(10,2),
+    forward_pe NUMERIC(10,2),
+    dividend_yeld NUMERIC(10,2),
+    ma50 NUMERIC(10,2),
+    ma200 NUMERIC(10,2),
+    PRIMARY KEY (id)
+);
+CREATE UNIQUE INDEX ix_stocks_symbol ON stocks (symbol);
+CREATE INDEX ix_stocks_id ON stocks (id);
